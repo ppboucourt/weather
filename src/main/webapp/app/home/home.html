@@ -1,0 +1,50 @@
+<div ng-cloak>
+    <form  id="vm.form" name="form" role="form" novalidate ng-submit="vm.submit()" show-validation>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" data-translate="home.label.cities"
+                           for="cities"></label>
+                    <input type="text" class="form-control" name="cities"
+                           id="cities" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"
+                           ng-model="vm.cities" required
+                           ng-keyup="vm.validateCity()">
+
+                    <div ng-show="vm.form.cities.$invalid">
+                        <p class="help-block">
+                            That's no a city...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="file" data-translate="home.label.file"></label>
+                    <input type="file" class="form-control" type="button" ngf-select
+                           angular-bfi="{'showUpload':false, 'previewFileType':'any', 'showRemove': true, showPreview: false, showCancel: false,}"
+                           name="file" id="file"
+                           ngf-change="vm.attachFile($file)" accept="image/*,pdf,csv">
+                    </input>
+                </div>
+                <!--<div-->
+                <!--class="form-group">-->
+                <!--<label class="control-label">Front Picture</label>-->
+                <!--<br>-->
+                <!--<div class="block-mt5">-->
+                <!--<a class="badge label-info">-->
+                <!--<i class="fa fa-picture-o"></i> View Picture</a>-->
+                <!--<a class="badge label-danger">-->
+                <!--<i class="fa fa-trash"></i> Remove Picture</a>-->
+                <!--</div>-->
+
+                <!--</div>-->
+            </div>
+
+        </div>
+        <!--<div class="row">-->
+            <input class="btn btn-primary" type="submit"/>
+        <!--</div>-->
+    </form>
+</div>
