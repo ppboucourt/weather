@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "value",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "25000"
+        }
+    ],
+    "changelogDate": "20170901031243",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "weather",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

@@ -40,6 +40,7 @@ public class CacheConfiguration {
             cm.createCache(com.pp.weather.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.pp.weather.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.pp.weather.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.pp.weather.domain.Weather.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

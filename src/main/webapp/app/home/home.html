@@ -2,6 +2,7 @@
     <form  id="vm.form" name="form" role="form" novalidate ng-submit="vm.submit()" show-validation>
         <div class="row">
 
+
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="control-label" data-translate="home.label.cities"
@@ -18,7 +19,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="control-label" for="file" data-translate="home.label.file"></label>
@@ -28,23 +28,52 @@
                            ngf-change="vm.attachFile($file)" accept="image/*,pdf,csv">
                     </input>
                 </div>
-                <!--<div-->
-                <!--class="form-group">-->
-                <!--<label class="control-label">Front Picture</label>-->
-                <!--<br>-->
-                <!--<div class="block-mt5">-->
-                <!--<a class="badge label-info">-->
-                <!--<i class="fa fa-picture-o"></i> View Picture</a>-->
-                <!--<a class="badge label-danger">-->
-                <!--<i class="fa fa-trash"></i> Remove Picture</a>-->
-                <!--</div>-->
-
-                <!--</div>-->
             </div>
+            <div class="col-md-2">
+                <input class="btn btn-primary" type="submit" value="Submit JQuery"/>
+            </div>
+            <div class="col-md-3">
+                <input class="btn btn-primary" type="button" ng-click="vm.submitRest()" value="Submit REST Server"/>
+            </div>
+            <div class="col-md-7">
+                <input class="btn btn-primary" type="button" ng-click="vm.loadAll()"  value="Load"/>
+            </div>
+        </div>
+        <div class="row" style="padding: 2em;">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
 
+
+                    <!--"city": "Chanute",-->
+                    <!--"state": "KS",-->
+                    <!--"country": "US",-->
+                    <!--"country_iso3166":"US",-->
+                    <!--"country_name":"USA",-->
+                    <!--"zmw": "66720.1.99999",-->
+
+                    <th>#</th>
+                    <th><span data-translate="global.field.city">City</span></th>
+                    <th><span data-translate="global.field.state">State</span></th>
+                    <th><span data-translate="global.field.country">Country</span></th>
+                    <th><span data-translate="global.field.zmw">ZMW</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td valign="top" colspan="7" ng-if="!vm.weather.length">No data available in table</td>
+                </tr>
+                <tr ng-repeat="value in vm.weather track by $index">
+                    <td>{{$index+1}}</td>
+                    <td>{{value.city}}</td>
+                    <td>{{value.state}}</td>
+                    <td>{{value.country}}</td>
+                    <td>{{value.zmw}}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <!--<div class="row">-->
-            <input class="btn btn-primary" type="submit"/>
         <!--</div>-->
     </form>
 </div>

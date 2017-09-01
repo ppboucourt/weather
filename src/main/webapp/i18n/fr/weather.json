@@ -1,0 +1,23 @@
+{
+    "weatherApp": {
+        "weather" : {
+            "home": {
+                "title": "Weathers",
+                "createLabel": "Créer un nouveau Weather",
+                "createOrEditLabel": "Créer ou éditer un Weather",
+                "search": "Recherche pour Weather"
+            },
+            "created": "Un nouveau Weather a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Weather avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Weather avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Weather {{ id }} ?"
+            },
+            "detail": {
+                "title": "Weather"
+            },
+            "value": "Value",
+            "description": "Description"
+        }
+    }
+}

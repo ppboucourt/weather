@@ -7,6 +7,7 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
+                "weather": "Weather",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -72,7 +73,11 @@
             }
         },
         "field": {
-            "id": "ID"
+            "id": "ID",
+            "city": "Ville",
+            "state": "Etat",
+            "country": "Pays",
+            "zmw": "ZMW"
         },
         "ribbon": {
             "dev":"Développement"

@@ -1,0 +1,23 @@
+{
+    "weatherApp": {
+        "weather" : {
+            "home": {
+                "title": "Weathers",
+                "createLabel": "Create a new Weather",
+                "createOrEditLabel": "Create or edit a Weather",
+                "search": "Search for Weather"
+            },
+            "created": "A new Weather is created with identifier {{ param }}",
+            "updated": "A Weather is updated with identifier {{ param }}",
+            "deleted": "A Weather is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Weather {{ id }}?"
+            },
+            "detail": {
+                "title": "Weather"
+            },
+            "value": "Value",
+            "description": "Description"
+        }
+    }
+}
